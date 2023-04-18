@@ -478,16 +478,31 @@ Alternatively if you want to just have a single hero
 
         // Ejercicio 1: Muestra por consola la propiedad tagName del elemento 'body'
 
+        console.log(document.body.tagName);
+
+        /* Solucion de Oscar:
+        console.log(document.querySelector('body').tagName)
+        */
 
         // Ejercicio 2: Cambia el color del fondo del elemento 'body' a '#123456'
+        document.querySelector('body').style.backgroundColor = '#123456' //Oscar puso la misma solucion ✅
 
         // Ejercicio 3: Añade la clase 'colorAmarillo' al <nav>. ¿A qué color cambia el <nav>? ¿Por qué?
+        document.querySelector('nav').classList.add('colorAmarillo')
+
+        //Porque las reglas de la clase "colorAmarillo" indican que el background se ponga en color amarillo
 
         // Ejercicio 4: Añade la clase 'decoration-dashed' al precio del primer producto. ¿Qué ocurre? ¿Por qué?
 
+        document.querySelector('#primer-precio').classList.add('decoration-dashed')
+
         // Ejercicio 5: Elimina la clase 'hidden' del útimo DIV antes de cerrar el footer. ¿Qué ocurre? ¿Por qué?
 
-        // Ejercicio 6: (DIFICILISIMO). un usuario acaba de añadir a favoritos el último producto de la lista. Haz que el contorno del corazón se vuelva rojo. Pista: NO es cambiar eñ backgroundColor
+        document.querySelector('#cosa-oculta').classList.remove('hidden')
+
+        // Ejercicio 6: (DIFICILISIMO). un usuario acaba de añadir a favoritos el último producto de la lista. Haz que el contorno del corazón se vuelva rojo. Pista: NO es cambiar en backgroundColor
+        
+        document.querySelector('.h-6 w-6 fill-current text-gray-500 hover:text-black').classList.add('focus:bg-red-500')
 
         // Ejercicio 6: El siguiente forEach muestra todas las <img> de esta Web. ¿Como lo podemos modificar para que por consola SOLAMENTE muestre la propiedad .src de cada imagen? Solo modificar una línea de código
         console.log('---Ejercicio 6---');
